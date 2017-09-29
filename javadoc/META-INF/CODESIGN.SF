@@ -1,0 +1,321 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: VmrRqAIgAm0FCZViZFzpaP8OfDbN4
+ iY0MyYFuzTMPv8=
+SHA-256-Digest-Manifest: fm1hgf637/GB7m3NVzIWIQe5cceFkzPq0ulhWc59NB4=
+Created-By: 1.8.0_60 (Oracle Corporation)
+
+Name: com/ca/codesv/sdk/function/package-tree.html
+SHA-256-Digest: Pxehbnw2sgKmOJYvoqd+U8nUlEfF5qXOtMZ2XiWPHyo=
+
+Name: com/ca/codesv/protocols/http/HttpConnection.HttpsConfigurationBu
+ ilder.html
+SHA-256-Digest: PHPau6W0/TUMGi1HChbqN0x3a0HqqpXnDznhPn3ZINs=
+
+Name: com/ca/codesv/agent/package-frame.html
+SHA-256-Digest: 6JCkPP6xRuqRIOV58FPDIPxMUgFf35jpNN+s3BfTPos=
+
+Name: com/ca/codesv/api/matchers/AttributesLoadingMatcher.html
+SHA-256-Digest: fpHpgKLaRadOET1YPK5rmfmIapIYGgR/5LzQJKyrjZI=
+
+Name: com/ca/codesv/sdk/function/Function.html
+SHA-256-Digest: xkY6PY3TejoI8de8moVTLe3pfbd3yEKIttLq8B4a0xw=
+
+Name: com/ca/codesv/agent/Agent.html
+SHA-256-Digest: Q5ir6Ui7w8XOubvLoCckBLuWwmN8l6yGwm078P/rEfE=
+
+Name: com/ca/codesv/api/TransactionVerificationProvider.html
+SHA-256-Digest: WHC6Y7E4QKm6tnL56R50wz0oIhdBD9oQBR3mViSePXM=
+
+Name: com/ca/codesv/api/VirtualServer.html
+SHA-256-Digest: jaBGwrgPzuLgo1zPJzQbxzGwIMGE40sshDwtPWQbYMs=
+
+Name: com/ca/codesv/api/package-frame.html
+SHA-256-Digest: oGHeMqSwhl5vPQLieoLQhEVAsH8f4jDuPFcpj2LEEDQ=
+
+Name: com/ca/codesv/sdk/ResponseBuilder.html
+SHA-256-Digest: qk5uyR46h3YXQ+XTKz/srWcXyJg8q2Vq/ksgkau/MWQ=
+
+Name: com/ca/codesv/protocols/http/package-summary.html
+SHA-256-Digest: +SsJ1aQI6HYwSuPvvMZ1GPYQweBzeRd2HvSpz7SVLEE=
+
+Name: com/ca/codesv/api/ProtocolServer.html
+SHA-256-Digest: vSM+FaFJqhXPtyBe/UL+6S4LmbbFDUSpKBOfwZInSvI=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpRequestMessageBuilder.ht
+ ml
+SHA-256-Digest: UogVD67Dz4Lz8Gu+D3Glj8T28Fy8OsqyYnez8+KtOwQ=
+
+Name: com/ca/codesv/engine/junit4/package-tree.html
+SHA-256-Digest: +foOPHk7WAdEEah5mPxqQ329DX6C5uTugwxtDgdU1Iw=
+
+Name: com/ca/codesv/protocols/http/matchers/package-summary.html
+SHA-256-Digest: PKNhEuYu1bVcwEQwGl6wQK7ghKFJA7FbZIW5SU4PGCU=
+
+Name: com/ca/codesv/sdk/function/Consumer.html
+SHA-256-Digest: gGVbOa58GcU3vTCQNACt+f+2ckIgg4VpkKIkyaEH65c=
+
+Name: constant-values.html
+SHA-256-Digest: VkvSS6XUTGUtPMzSUawveqj97JPXnYQAEMionotUS0I=
+
+Name: com/ca/codesv/api/matchers/MetaLoadingMatcher.html
+SHA-256-Digest: m1bLBy7BGd5LHQtu5K2Cm0vIgV+bjFlS/KqSx/pEF5I=
+
+Name: stylesheet.css
+SHA-256-Digest: +qz/hCU5lBogE8j1p9SSoIr+ij+qotxZldebobLidmw=
+
+Name: com/ca/codesv/api/matchers/PredicateMatcher.html
+SHA-256-Digest: CrDP7bCkY8S7nVhC2UcO24oM9fin2ghQ/5/OVZ5ZfGY=
+
+Name: com/ca/codesv/protocols/http/fluent/package-frame.html
+SHA-256-Digest: ze9nLMGJEqlG+Q2MTIuJ8+pZadnQhyJqUSviIGZ0jrY=
+
+Name: com/ca/codesv/agent/hijack/HijackMode.html
+SHA-256-Digest: EIHvgb8rNMb5o4VKVahP4Vtk8RW8N4J6JMFulTQjFx4=
+
+Name: com/ca/codesv/api/package-tree.html
+SHA-256-Digest: YuViFcIQoOVjtc01GVV7Lb+iR8Y7My6ansCpLTLx1qM=
+
+Name: deprecated-list.html
+SHA-256-Digest: yAQXTZ+Z7z9ZJ/PXpH18uOo3CYcKQDOhdwOnKUsm9gY=
+
+Name: com/ca/codesv/agent/package-tree.html
+SHA-256-Digest: ZoJfZ3nM5IMRlb2mYEeDyERcSujpfNU7jO2rcpikARQ=
+
+Name: com/ca/codesv/sdk/function/Composition.html
+SHA-256-Digest: hBJNb93WL3S1+EHwbENc5X/y+gA7c95bu/jNWjMyTsU=
+
+Name: allclasses-noframe.html
+SHA-256-Digest: Jucn05tGMeOQcsGfqu48nojgVvvx4fYfghiBmbiZcfk=
+
+Name: com/ca/codesv/agent/package-summary.html
+SHA-256-Digest: JbYgF4Fv+LFEe8+8fqGmdPzcbo4JV3ZA7m405B5i1LM=
+
+Name: com/ca/codesv/sdk/Request.html
+SHA-256-Digest: bz8bBnASsc8UOuzwy+5Wx13CBom6LGRC+NZMLCU0j+8=
+
+Name: com/ca/codesv/api/VirtualTransactionBuilder.html
+SHA-256-Digest: QPPD3w3Cn+ZTU/LRUJmKggGDLMXg9H+ZJb20QSlK9JU=
+
+Name: com/ca/codesv/api/matchers/RegexMatcher.html
+SHA-256-Digest: 24+vtp4WjDaOcPKHgWYUQJWmZdgnPoxz/Plvi8B032k=
+
+Name: com/ca/codesv/api/matchers/GenericMatchers.html
+SHA-256-Digest: XY8ULBq8IL9u2r13rKp/87WeZCzFnw94yPATCjfGsLQ=
+
+Name: com/ca/codesv/agent/hijack/HijackBehavior.html
+SHA-256-Digest: vzLMpuuBOgB3t/YZ3MFRo2VmY+/XNE5WSF5Qk5bmU+Q=
+
+Name: com/ca/codesv/api/matchers/ArgumentsLoadingMatcher.html
+SHA-256-Digest: lZe+Reba12fRePNrlYTzvDD33SwV2p9AVygiZRxhjsc=
+
+Name: com/ca/codesv/engine/junit4/package-frame.html
+SHA-256-Digest: ROo6FZTbMK//9zHQd7gQUNDjDkNimmGos/EJ+HjhgNk=
+
+Name: com/ca/codesv/protocols/http/matchers/HttpMatchers.html
+SHA-256-Digest: S330hc9hCAErohrYh+x1MxZc/TNOM6PmLCy58Pq+uBI=
+
+Name: com/ca/codesv/protocols/http/fluent/package-tree.html
+SHA-256-Digest: sOeM4PxrNlbBao+ILfNwCVhehdun7BeV3Xr356hpHP8=
+
+Name: com/ca/codesv/sdk/GenericResponseBuilder.html
+SHA-256-Digest: KPWp+AQsachg1TV8jJof1/mIe/AxELGW6LGrOlBPod4=
+
+Name: com/ca/codesv/engine/junit4/package-summary.html
+SHA-256-Digest: 6K2UafXG0DNKvttSP//mKba5CAt/o1ov0OQ/i4lSY6c=
+
+Name: com/ca/codesv/sdk/function/package-summary.html
+SHA-256-Digest: G8yGdQ2Q9BcSbC6D0gyyhvxcQw0t1qQvZ4BhKKGSqPY=
+
+Name: overview-summary.html
+SHA-256-Digest: Gmq+U7+bVF0zx2U6bi0WRNqKfnjxcGycXTrxIpJrPAs=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpTransactionBuilder.html
+SHA-256-Digest: WenmfPsPpLDUIahQ61ZiaQD1JJ232xM5OsgRhsKlq2k=
+
+Name: allclasses-frame.html
+SHA-256-Digest: YSFkP11UndyAKaXXlZbqPXGkWXX/X1Op/BY81jSPklY=
+
+Name: com/ca/codesv/agent/hijack/package-frame.html
+SHA-256-Digest: fct90b+fzBTK1iXBZmgnKyTQQ1jrziSSfoqY0Hv7z/Q=
+
+Name: com/ca/codesv/protocols/http/package-frame.html
+SHA-256-Digest: Xvna8IbLtp7ISoKdvZssBgwoo+kPrryddWXwWSBXeR4=
+
+Name: com/ca/codesv/agent/AgentLoader.html
+SHA-256-Digest: YUygrFDDf+BdKClaSk9C4+Ty10vjRcC3lWH6UesGWNA=
+
+Name: com/ca/codesv/protocols/http/package-tree.html
+SHA-256-Digest: Ugmc/SrYr3oN6xsKPaJqTBdJtxcz1wQY8XmDsRmUxCk=
+
+Name: com/ca/codesv/api/VerifiedTransactionBuilder.html
+SHA-256-Digest: SVg4WsuXv2W3PgVo0AW3HsTpf58qxwXcFm0CwiXrI8k=
+
+Name: com/ca/codesv/engine/junit4/VirtualServerRule.html
+SHA-256-Digest: sTjjU5Y1JUwlJ83rpdZqye1GYqvCP3HPGm1l+cxmU/E=
+
+Name: com/ca/codesv/agent/AgentException.html
+SHA-256-Digest: J6jVdekBm9je6GkAZLdNLsMew4Q/LCa9lmTKVCbLddI=
+
+Name: com/ca/codesv/api/VirtualServerFactory.html
+SHA-256-Digest: npmZ5qG1QVOseJMJWtjcv4p/VmGi7Kq3b+OFuvWssuc=
+
+Name: com/ca/codesv/protocols/http/HttpConnection.html
+SHA-256-Digest: nF+Gq3H/O9dsf/J8JzY502F0vplUJ4JlbEVXjGhh46s=
+
+Name: com/ca/codesv/sdk/package-summary.html
+SHA-256-Digest: WalGEFPXLMEgAfObUIbnhPVUvn1I/h6eXVwECUd/Aq4=
+
+Name: com/ca/codesv/protocols/http/fluent/AbstractHttpDefaultResponseB
+ uilder.html
+SHA-256-Digest: x3D2DdF/99tNHDR73nPc6O/5LJ8PsHWv15C1k7Mpyxg=
+
+Name: com/ca/codesv/sdk/Protocol.html
+SHA-256-Digest: YCgPi3HaNApV8nBG6N5x18HTlrmApTE/8FhAqlE1utw=
+
+Name: index.html
+SHA-256-Digest: pqnp2Bwl+fsH/m5FjPGMf3U8hZ1m2YKfVxLgTj8y4Is=
+
+Name: com/ca/codesv/api/package-summary.html
+SHA-256-Digest: m0+6fpVIHFjZpfeHMJMKlUkYKAdp5nGIY3xSB6lfFt4=
+
+Name: package-list
+SHA-256-Digest: QbFxLP34RGGrPccz12R5TaySwNufSyHa02WK1z3Eo5w=
+
+Name: com/ca/codesv/sdk/package-tree.html
+SHA-256-Digest: yr+CHAvpCBb4f3dNOsEAEoWaUa9U9obHR3D05L2ezeY=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpTransactionReference.htm
+ l
+SHA-256-Digest: xUapntOx8vdooZ3geSnrtPD8OF1jcjWAatbAhSQQ1Qs=
+
+Name: com/ca/codesv/sdk/function/package-frame.html
+SHA-256-Digest: mfJmsLmEHNn/K5iL4FSBDM2djkRkFudTo7wBFzI4YEw=
+
+Name: script.js
+SHA-256-Digest: nJwDr+aQIKCr6lA9u+r9q199SUJpGEpnleeAlR4khjk=
+
+Name: com/ca/codesv/api/Verification.html
+SHA-256-Digest: +hrVtZxX7WYq8ijRAeU47nk8CGoIH07VpddSb8Qg2Xg=
+
+Name: com/ca/codesv/api/ConnectedServer.html
+SHA-256-Digest: iOPt+GQGb/DDKrDVHqcKdD417jQp8p11mWEbjGE0dUA=
+
+Name: com/ca/codesv/sdk/function/Composition.FunctionComposition.html
+SHA-256-Digest: eySEn0wUe5fsgWyEBS9f0r62Q2Syr+lFwCN+EsULeMk=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpFluentInterface.html
+SHA-256-Digest: UckBFnvC7aOxC+orDSEmkBt1bzeOOCRU6GQInzaAZtk=
+
+Name: overview-frame.html
+SHA-256-Digest: ZJZgj8jIn2ppaMWxT7ACS+HqsXyVVb0mrdOycUyIGf4=
+
+Name: com/ca/codesv/agent/hijack/package-tree.html
+SHA-256-Digest: NsxpuKQxsH3EpbceZP0HHXRF2p3ZGEobRwO+nu+fDIY=
+
+Name: com/ca/codesv/api/matchers/package-summary.html
+SHA-256-Digest: egkoZzBNNSRV0/slQKkV4EbJBi2Rk22cYJ1olr/sb3M=
+
+Name: com/ca/codesv/sdk/function/Composition.PredicateComposition.html
+SHA-256-Digest: 4FTo7lsKfBoCVFPl7sB/NrL6ajXxlpUYNZO61HCwCRs=
+
+Name: index-all.html
+SHA-256-Digest: U9KINK35SzSQi2g+NL81eIpiglMoEMZryVdzdYP/STM=
+
+Name: com/ca/codesv/api/matchers/ListLoadingMatcher.html
+SHA-256-Digest: 4h1VFZgqTpW/eoTXLjOnZD9eZBk62tBn9xKUhw1tdnw=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpResponseBuilder.html
+SHA-256-Digest: tUdcC12qLsxFz43j+jFb04IfpVU97Rxh1zj0L+zOyNk=
+
+Name: com/ca/codesv/protocols/http/HttpConnection.HttpsConfiguration.h
+ tml
+SHA-256-Digest: TDhboK96PROP0iC6VYhruw0yK17w60fPFhD1VLcwIEs=
+
+Name: com/ca/codesv/protocols/http/matchers/package-tree.html
+SHA-256-Digest: ipvDLGONCFtH3KektNlWHTznNQxRIY0PDH0VQcU/vGE=
+
+Name: com/ca/codesv/api/matchers/package-frame.html
+SHA-256-Digest: kcnxjry3JpSGu/Sjj+ErwCy/bWI++oMg+IUOTs/4xUw=
+
+Name: serialized-form.html
+SHA-256-Digest: 4TdFewYLC9TkQDSiTzr/AHUo0an+HgK7i5OglFPQ7xU=
+
+Name: com/ca/codesv/protocols/http/fluent/AbstractHttpRequestMessageBu
+ ilder.html
+SHA-256-Digest: n7L8SSTDELAJ0tmwPmDMx4yKazPnTCQr9rIx+JNoepw=
+
+Name: help-doc.html
+SHA-256-Digest: d7Or28nWYkLAegy296HnyifwqOqH3RtEWWaZVz2QHV4=
+
+Name: com/ca/codesv/api/RequestAccessor.html
+SHA-256-Digest: B/oczURC3faRxAtcv/ugKMIUCSM5Hcu4aULdMlIPvao=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpVerificationBuilder.html
+SHA-256-Digest: uFYnx4hbwWdOh6d10BOc3zKBkUIFdrDitm0gsZKmHz4=
+
+Name: com/ca/codesv/protocols/http/fluent/package-summary.html
+SHA-256-Digest: SS+unAioeRt+mKWZfLHjSxUZAW7WzJJQeinq20E4MOs=
+
+Name: com/ca/codesv/agent/AgentTransformer.html
+SHA-256-Digest: QCg9F9CR2ehgEqZECGP2yZNZAm0V1QESPzkjy2USczQ=
+
+Name: com/ca/codesv/sdk/function/Predicate.html
+SHA-256-Digest: DIUM2p3J8xJ6bGduzwlvS97jidctd9dIC9foG44daWY=
+
+Name: com/ca/codesv/sdk/Response.html
+SHA-256-Digest: UjYV4WkA7b/qowunnkQM6oPWgr+kbvaXTFh0wPvxiR8=
+
+Name: com/ca/codesv/api/matchers/package-tree.html
+SHA-256-Digest: W1MOo3wHBK/+q3gQPkrrpMhmkIVbRaMvhnHrjqLd7jU=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpTransactionVerificationB
+ uilder.html
+SHA-256-Digest: UGrKTWLCxukmn3r4dDEijaWqrh4BNuXUTYa+bAVears=
+
+Name: com/ca/codesv/agent/hijack/HijackContext.html
+SHA-256-Digest: n9jc6pOrWAVv6sPOtX800jIfKzUWTgZIVDVIsVRnKDM=
+
+Name: com/ca/codesv/protocols/http/fluent/HttpPayload.html
+SHA-256-Digest: 6xswEJyPUZhRpEIzJTm0Y1b49vNXYmfzI3zswtzHlBA=
+
+Name: com/ca/codesv/api/matchers/TemplateMatcher.html
+SHA-256-Digest: HbSNA9LNdYsMBI9+aAhH7sBvueI6UaPgJALn7Xcf2OQ=
+
+Name: overview-tree.html
+SHA-256-Digest: 92UWhzwqg8jcMxDXivNRJOd5Qq8dWyGkYAoBEL8bf4k=
+
+Name: com/ca/codesv/protocols/http/fluent/AbstractHttpRequestVerificat
+ ionBuilder.html
+SHA-256-Digest: k9/u+j5n4TxM1kdBrveWZM6Kf3pkM+jRoUlM++m6bjA=
+
+Name: com/ca/codesv/sdk/Connection.html
+SHA-256-Digest: bMRTPliquJu3B8Nm2YL2X6YSzo4wZTTvNxT/BFZlo6w=
+
+Name: com/ca/codesv/sdk/function/Composition.ConsumerComposition.html
+SHA-256-Digest: OcprOJJlJNov4+tjwCzVVh6r6DMvT7L2yGaHXNXs5CU=
+
+Name: com/ca/codesv/protocols/http/fluent/AbstractHttpTransactionBuild
+ er.html
+SHA-256-Digest: KGzktlwSvuRuVU7Oi3FJKFgsrU0lcKH+czq04u48oZ8=
+
+Name: com/ca/codesv/agent/HijackTransformer.html
+SHA-256-Digest: jXJkWZedSefXisQIkS8e/jTXVY+BEQeBcIhSzbCcM9M=
+
+Name: com/ca/codesv/api/RuntimeServer.html
+SHA-256-Digest: wIclKmgYEKm/PFgPT8UK+LMHd7pUm9i8MtgOsbq0sDg=
+
+Name: com/ca/codesv/sdk/package-frame.html
+SHA-256-Digest: HI/xiWT/qRIff29Zyy7BK3aUXshKMzOXUNHO8ZifGK4=
+
+Name: com/ca/codesv/api/matchers/ListMultimapLoadingMatcher.html
+SHA-256-Digest: hcB+xWcWkZAOX79nm/23gfBmEhcG76a5Fc2MNE0TasE=
+
+Name: com/ca/codesv/agent/hijack/package-summary.html
+SHA-256-Digest: S7XPhIM133+Wjj/3VS+xYxt/MYGKIJaNi/sc3ShIrTM=
+
+Name: com/ca/codesv/protocols/http/matchers/package-frame.html
+SHA-256-Digest: eWVSJmhBj5MhR7xuqk+mJFAiWj4fOrHgc19kK2kqEJk=
+
+Name: com/ca/codesv/api/VirtualServiceBuilder.html
+SHA-256-Digest: AP+FH394TcsvfKdiAJqr7o6CMSZ5Vam2vs0vkiCTqhU=
+
