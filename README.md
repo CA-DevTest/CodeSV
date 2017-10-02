@@ -1,24 +1,26 @@
-# Service Virtualization as Code
+# CodeSV
 
-CA Service Virtualization as Code (SV as Code) is a new, lightweight way to define virtual services and save valuable time. 
+CA CodeSV is a new, lightweight way to define virtual services and save valuable time. 
 
-At the core, SV as Code delivers a simple yet powerful Java library that provides an easy to use API so you can create and run virtual services as a part of jUnit testing. 
+At the core, CodeSV delivers a simple yet powerful Java library that provides an easy to use API so you can create and run virtual services as a part of jUnit testing. 
 
 You can create and run HTTP virtual service definitions directly in your unit testing code.
 
-Even better, the HTTP virtual services are completely transparent to an application under test and so you don't need to make any configuration tweaks.
+Even better, the HTTP virtual services are completely transparent to an application under test. This means you don't have to make any other configuration tweaks.
 
-[How to use SV as Code](https://github.com/CA-DevTest/SV-as-Code/wiki/Quick-Start-Guide)
+[How to use CodeSV](https://github.com/CA-DevTest/CodeSV/wiki/Quick-Start-Guide)
 
 [Share ideas and raise issues](https://communities.ca.com/community/ca-devtest-community/content?filterID=contentstatus%5Bpublished%5D~category%5Bsv-as-code%5D)
 
 
 ## Code Example
+Here is a simple example of a jUnit test running an embedded virtual service using CodeSV.
+
 ```java
-import static com.ca.svcode.protocols.http.fluent.HttpFluentInterface.*;
+import static com.ca.codesv.protocols.http.fluent.HttpFluentInterface.*;
 import static org.junit.Assert.*;
 
-import com.ca.svcode.engine.junit4.VirtualServerRule;
+import com.ca.codesv.engine.junit4.VirtualServerRule;
 import org.junit.*;
 
 public class ExampleTest {
