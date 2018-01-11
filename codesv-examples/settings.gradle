@@ -1,2 +1,4 @@
+include 'springboot-virtualized-soap-example'
+include 'virtualized-http-examples'
 rootProject.name = 'svcode-examples'
 

@@ -1,0 +1,5 @@
+client:
+  default-uri: http://localhost:9090/codesv/ws/greeting
+
+server:
+  port: 9090

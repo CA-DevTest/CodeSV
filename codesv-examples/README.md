@@ -1,5 +1,8 @@
-### SV as Code Code Examples
+### CodeSV Code Examples
+These are sample Gradle projects that contain tests to show the capabilities of CodeSV. All examples in these projects are virtualizing HTTP services using a HTTP fluent API.
 
-This is a sample gradle project containing tests showing capabilities of SV as Code. All examples are virtualizing HTTP services using HTTP fluent API.
+These projects are runnable only with Java 8 and Gradle.
 
-This project is runnable only with Java 8 and Gradle.
+Projects:
+* [virtualized-http-example](./virtualized-http-examples/)
+* [springboot-virtualized-soap-example](./springboot-virtualized-soap-example/)

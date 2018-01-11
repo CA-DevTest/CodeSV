@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"portfolio": {
+   "id": "1",
+   "year": "2016",
+  "productNamesList": [
+    "CA Server Automation",
+    "CA Service Catalog",
+    "CA Service Desk Manager",
+    "CA Service Management",
+    "CA Service Operations Insight",
+    "CA Service Virtualization"
+  ]
+}}

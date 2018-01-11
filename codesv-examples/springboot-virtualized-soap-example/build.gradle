@@ -1,0 +1,84 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven'
+apply plugin: 'checkstyle'
+
+group 'com.ca.codesv'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://ca.bintray.com/sv" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
+}
+
+
+configurations {
+    jaxb
+    jaxws
+}
+
+
+repositories {
+    mavenLocal()
+    maven { url "http://ca.bintray.com/sv" }
+    mavenCentral()
+}
+
+task genJaxb {
+    ext.destDir = file("${buildDir}/generated-sources/jaxb")
+    ext.classesDir = "${buildDir}/classes/jaxb"
+    doLast {
+        ant {
+            mkdir(dir: sourceSets.main.output.classesDir)
+            mkdir(dir: destDir)
+            mkdir(dir: classesDir)
+            taskdef(name: 'wsimport',
+                    classname: 'com.sun.tools.ws.ant.WsImport',
+                    classpath: configurations.jaxws.asPath
+            )
+            wsimport(keep: true,
+                    destdir: sourceSets.main.output.classesDir,
+                    sourcedestdir: destDir,
+                    extension: "true",
+                    verbose: "false",
+                    quiet: "false",
+                    package: "com.ca.codesv.types.greeting",
+                    xnocompile: "true",
+                    wsdl: "${projectDir}/src/main/resources/wsdl/greeting.wsdl") {
+                xjcarg(value: "-XautoNameResolution")
+            }
+
+            javac(destdir: classesDir, source: 1.6, target: 1.6, debug: true,
+                    debugLevel: "lines,vars,source",
+                    classpath: configurations.jaxb.asPath) {
+                src(path: destDir)
+                include(name: "**/*.java")
+                include(name: "*.java")
+            }
+        }
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext['jetty.version'] = '9.2.17.v20160517'
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-web-services")
+    compile(files(genJaxb.classesDir).builtBy(genJaxb))
+
+    jaxb("com.sun.xml.bind:jaxb-xjc:2.1.7")
+    jaxws('com.sun.xml.ws:jaxws-tools:2.1.4')
+
+    testCompile("junit:junit:4.12")
+    testCompile("com.ca.codesv:codesv-dist-jar:1.2.1")
+}

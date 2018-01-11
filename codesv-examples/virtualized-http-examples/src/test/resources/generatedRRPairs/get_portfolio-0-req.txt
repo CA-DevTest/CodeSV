@@ -1,0 +1,8 @@
+GET /portfolio?year=2016&tokenQuery=X4sPhj15WQE HTTP/1.1
+Connection: keep-alive
+User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_121)
+Host: www.ca.com
+Accept-Language: en_us
+Accept-Encoding: gzip,deflate
+Custom-Header: CustomValue
+
