@@ -35,7 +35,7 @@ import com.google.gson.Gson;
  *
  * @author CA
  */
-@VirtualServiceRepository(virtualServiceName = "Qa service")
+@VirtualServiceRepository(serviceName = "Qa service")
 public class QaRepository {
 
 	@TransactionDefinition(name = "simpleResponse", tags = {"COMMON", "QA"})

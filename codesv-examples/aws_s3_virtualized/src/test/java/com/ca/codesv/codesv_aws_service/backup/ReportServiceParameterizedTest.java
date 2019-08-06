@@ -28,6 +28,8 @@ import com.ca.codesv.codesv_aws_service.ReportService;
 import com.ca.codesv.codesv_aws_service.ReportUploadResult;
 import com.ca.codesv.codesv_aws_service.repository.S3CodeSvDemoBucketRepository;
 import com.ca.codesv.engine.junit4.VirtualServerRule;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -41,11 +43,13 @@ import java.util.Collection;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
+@TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
 public class ReportServiceParameterizedTest {
 
     @Rule
-    @TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
-    public VirtualServerRule vs = new VirtualServerRule(this);
+    public VirtualServerRule vs = new VirtualServerRule();
+
+    private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
     @Parameterized.Parameter
     public String transactionName;
@@ -65,7 +69,7 @@ public class ReportServiceParameterizedTest {
 
     @Test
     public void processReport() {
-        vs.useTransaction(transactionName);
+        store.useTransaction(transactionName);
         ReportDraft reportDraft = new ReportDraft("My testing report",
                 "My Application",
                 "Lorem ipsum",

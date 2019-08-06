@@ -28,6 +28,8 @@ import com.ca.codesv.codesv_aws_service.ReportService;
 import com.ca.codesv.codesv_aws_service.ReportUploadResult;
 import com.ca.codesv.codesv_aws_service.repository.S3CodeSvDemoBucketRepository;
 import com.ca.codesv.engine.junit4.VirtualServerRule;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
@@ -35,11 +37,13 @@ import org.junit.runners.MethodSorters;
 import static org.junit.Assert.assertTrue;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
 public class ReportServiceCodeSvTest {
 
     @Rule
-    @TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
-    public VirtualServerRule vs = new VirtualServerRule(this);
+    public VirtualServerRule vs = new VirtualServerRule();
+
+    private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
     @Before
     public void setUp() {
@@ -50,7 +54,7 @@ public class ReportServiceCodeSvTest {
 
     @Test
     public void processReportWithCodeSvOk() {
-        vs.useTransaction("successful report upload");
+        store.useTransaction("successful report upload");
 
         ReportDraft reportDraft = new ReportDraft("My virtualized testing report",
                 "My Application",
@@ -65,7 +69,7 @@ public class ReportServiceCodeSvTest {
 
     @Test
     public void processReportWithoutPermissions() {
-        vs.useTransaction("access denied");
+        store.useTransaction("access denied");
 
         ReportDraft reportDraft = new ReportDraft("My virtualized testing report",
                 "My Application",

@@ -28,6 +28,7 @@ import static com.ca.codesv.protocols.http.fluent.HttpFluentInterface.okMessage;
 
 import com.ca.codesv.example.repository.pojo.ServiceResult;
 import com.ca.codesv.sdk.annotation.TransactionDefinition;
+import com.ca.codesv.sdk.annotation.VirtualServiceRepository;
 import com.google.gson.Gson;
 
 /**
@@ -35,6 +36,7 @@ import com.google.gson.Gson;
  *
  * @author CA
  */
+@VirtualServiceRepository(serviceName = "Default service")
 public class DefaultRepository {
 
 	public static final String SERVICE_URL = "http://www.carepositories.com";

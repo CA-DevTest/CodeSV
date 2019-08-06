@@ -28,11 +28,13 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import com.ca.codesv.engine.junit4.VirtualServerRule;
-import com.ca.codesv.engine.transaction.UseTransactionRule;
 import com.ca.codesv.example.repository.pojo.ServiceResult;
 import com.ca.codesv.example.repository.repositories.DefaultRepository;
 import com.ca.codesv.example.repository.repositories.DevRepository;
 import com.ca.codesv.example.repository.repositories.QaRepository;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
+import com.ca.codesv.protocols.transaction.UseTransactionRule;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -50,11 +52,14 @@ import org.junit.Test;
  *
  * @author CA
  */
+@TransactionClassRepository(repoClasses = {QaRepository.class, DevRepository.class,
+		DefaultRepository.class})
 public class ClassRepositoryExample {
+
 	@Rule
-	@TransactionClassRepository(repoClasses = {QaRepository.class, DevRepository.class,
-			DefaultRepository.class})
-	public VirtualServerRule vs = new VirtualServerRule(this);
+	public VirtualServerRule vs = new VirtualServerRule();
+
+	private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
 	private static final String DEV_SERVICE_NAME = "Dev service";
 	private static final String QA_SERVICE_NAME = "Qa service";
@@ -62,7 +67,7 @@ public class ClassRepositoryExample {
 	@Test
 	public void simpleByNameTest() throws Exception {
 		String transactionName = "simpleResponse";
-		vs.useTransaction(transactionName);
+		store.useTransaction(transactionName);
 
 		ServiceResult result = getResult("/simpleDefaultService");
 
@@ -77,8 +82,8 @@ public class ClassRepositoryExample {
 		String simpleTransactionName = "simpleResponse";
 		String commonTransactionName = "commonResponse";
 
-		vs.useTransaction(simpleTransactionName);
-		vs.useTransaction(commonTransactionName);
+		store.useTransaction(simpleTransactionName);
+		store.useTransaction(commonTransactionName);
 
 		ServiceResult result = getResult("/simpleDefaultService");
 
@@ -92,11 +97,11 @@ public class ClassRepositoryExample {
 	public void simpleByNameVsAndTagDevTest() throws Exception {
 		String transactionName = "simpleResponse";
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder(transactionName)
-				.forVirtualService("Dev service")
+		UseTransactionRule rule = new UseTransactionRule.RuleBuilder("Dev service")
+				.forTransaction(transactionName)
 				.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult result = getResult("/simpleDefaultService");
 
@@ -108,11 +113,11 @@ public class ClassRepositoryExample {
 	public void testVsNameIgnoreCase() throws Exception {
 		String transactionName = "simpleResponse";
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder(transactionName)
-				.forVirtualService("DeV sERVice")
+		UseTransactionRule rule = new UseTransactionRule.RuleBuilder("DeV sERVice")
+				.forTransaction(transactionName)
 				.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult result = getResult("/simpleDefaultService");
 
@@ -124,12 +129,13 @@ public class ClassRepositoryExample {
 	public void testRightTaggedTransaction() throws Exception {
 		String transactionName = "simpleResponse";
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder(transactionName)
-				.withTag("COMMON")
-				.withTag("QA")
-				.build();
+		UseTransactionRule rule = UseTransactionRule.RuleBuilder.crossServiceBuilder()
+																														.forTransaction(transactionName)
+																														.withTag("COMMON")
+																														.withTag("QA")
+																														.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult result = getResult("/simpleDefaultService");
 
@@ -141,11 +147,12 @@ public class ClassRepositoryExample {
 	public void testQaTransactionFromNonNamedRepositoryWithSameName() throws Exception {
 		String transactionName = "anotherResponse";
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder(transactionName)
-				.withTag("QA")
-				.build();
+		UseTransactionRule rule = UseTransactionRule.RuleBuilder.crossServiceBuilder()
+																														.forTransaction(transactionName)
+																														.withTag("QA")
+																														.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult result = getResult("/anotherService");
 
@@ -159,11 +166,12 @@ public class ClassRepositoryExample {
 	public void testDevTransactionFromNonNamedRepositoryWithSameName() throws Exception {
 		String transactionName = "anotherResponse";
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder(transactionName)
-				.withTag("DEV")
-				.build();
+		UseTransactionRule rule = UseTransactionRule.RuleBuilder.crossServiceBuilder()
+																														.forTransaction(transactionName)
+																														.withTag("DEV")
+																														.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult result = getResult("/anotherService");
 
@@ -175,13 +183,13 @@ public class ClassRepositoryExample {
 
 	@Test
 	public void testMultipleRuleUsage() throws Exception {
-		vs.useTransaction("commonResponse");
+		store.useTransaction("commonResponse");
 
-		UseTransactionRule rule = new UseTransactionRule.RuleBuilder()
-				.withTag("QA")
-				.build();
+		UseTransactionRule rule = new UseTransactionRule.RuleBuilder("Default service")
+																														.withTag("QA")
+																														.build();
 
-		vs.useTransactionWithRule(rule);
+		store.useTransactionWithRule(rule);
 
 		ServiceResult resultCommon = getResult("/commonService");
 		ServiceResult resultQa = getResult("/anotherService");

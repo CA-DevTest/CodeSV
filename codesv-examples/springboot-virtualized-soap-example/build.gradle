@@ -79,5 +79,5 @@ dependencies {
     jaxws('com.sun.xml.ws:jaxws-tools:2.1.4')
 
     testCompile("junit:junit:4.12")
-    testCompile("com.ca.codesv:codesv-dist-jar:1.2.1")
+    testCompile("com.broadcom.codesv:codesv-dist-jar:2.0.0")
 }

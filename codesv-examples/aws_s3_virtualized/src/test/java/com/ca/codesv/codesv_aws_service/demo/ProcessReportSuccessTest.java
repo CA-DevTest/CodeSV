@@ -22,24 +22,33 @@
 
 package com.ca.codesv.codesv_aws_service.demo;
 
-import com.ca.codesv.codesv_aws_service.*;
+import static org.junit.Assert.assertFalse;
+
+import com.ca.codesv.codesv_aws_service.AppEnv;
+import com.ca.codesv.codesv_aws_service.ReportCreatorService;
+import com.ca.codesv.codesv_aws_service.ReportDraft;
+import com.ca.codesv.codesv_aws_service.UnknownValidationResultException;
+import com.ca.codesv.codesv_aws_service.ValidationResult;
+import com.ca.codesv.codesv_aws_service.ViewModelHolder;
 import com.ca.codesv.codesv_aws_service.repository.S3CodeSvDemoBucketRepository;
 import com.ca.codesv.engine.junit4.VirtualServerRule;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-
+@TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
 public class ProcessReportSuccessTest extends BaseTest {
 
     @Rule
-    @TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
-    public VirtualServerRule vs = new VirtualServerRule(this);
+    public VirtualServerRule vs = new VirtualServerRule();
+
+    private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
     @Test
     public void processReportForm() throws UnknownValidationResultException {
-        vs.useTransaction(S3CodeSvDemoBucketRepository.SUCCESSFUL_REPORT_UPLOAD_TXN);
+        store.useTransaction(S3CodeSvDemoBucketRepository.SUCCESSFUL_REPORT_UPLOAD_TXN);
 
         // Prepare view model which needs to be tested
         ViewModelHolder viewModelHolder = new ViewModelHolder();

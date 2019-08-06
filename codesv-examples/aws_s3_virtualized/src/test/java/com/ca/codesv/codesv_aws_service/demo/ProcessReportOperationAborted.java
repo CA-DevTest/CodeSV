@@ -22,25 +22,33 @@
 
 package com.ca.codesv.codesv_aws_service.demo;
 
-import com.ca.codesv.codesv_aws_service.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import com.ca.codesv.codesv_aws_service.AppEnv;
+import com.ca.codesv.codesv_aws_service.ReportCreatorService;
+import com.ca.codesv.codesv_aws_service.ReportDraft;
+import com.ca.codesv.codesv_aws_service.ValidationResult;
+import com.ca.codesv.codesv_aws_service.ViewModelHolder;
 import com.ca.codesv.codesv_aws_service.repository.S3CodeSvDemoBucketRepository;
 import com.ca.codesv.engine.junit4.VirtualServerRule;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
+@TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
 public class ProcessReportOperationAborted extends BaseTest {
 
     @Rule
-    @TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
-    public VirtualServerRule vs = new VirtualServerRule(this);
+    public VirtualServerRule vs = new VirtualServerRule();
+
+    private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
     @Test
     public void processReportForm() throws Exception {
-        vs.useTransaction(S3CodeSvDemoBucketRepository.OPERATION_ABORTED_TXN);
+        store.useTransaction(S3CodeSvDemoBucketRepository.OPERATION_ABORTED_TXN);
 
         // Prepare view model which needs to be tested
         ViewModelHolder viewModelHolder = new ViewModelHolder();

@@ -26,6 +26,8 @@ import com.ca.codesv.codesv_aws_service.*;
 import com.ca.codesv.codesv_aws_service.repository.S3CodeSvDemoBucketRepository;
 import com.ca.codesv.engine.junit4.VirtualServerRule;
 import com.ca.codesv.model.ClassTransactionRepository;
+import com.ca.codesv.protocols.transaction.TxnRepoStore;
+import com.ca.codesv.protocols.transaction.TxnRepoStoreBuilder;
 import com.ca.codesv.sdk.annotation.TransactionClassRepository;
 import org.junit.Rule;
 import org.junit.Test;
@@ -38,11 +40,13 @@ import java.util.List;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(Parameterized.class)
+@TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
 public class ProcessReportParametrizedTest extends BaseTest {
 
     @Rule
-    @TransactionClassRepository(repoClasses = {S3CodeSvDemoBucketRepository.class})
-    public VirtualServerRule vs = new VirtualServerRule(this);
+    public VirtualServerRule vs = new VirtualServerRule();
+
+    private TxnRepoStore store = new TxnRepoStoreBuilder().build(this);
 
     @Parameterized.Parameter(0)
     public String transactionName;
@@ -59,7 +63,7 @@ public class ProcessReportParametrizedTest extends BaseTest {
 
     @Test
     public void processReport() throws UnknownValidationResultException {
-        vs.useTransaction(transactionName);
+        store.useTransaction(transactionName);
 
         // Prepare view model which needs to be tested
         ViewModelHolder viewModelHolder = new ViewModelHolder();
