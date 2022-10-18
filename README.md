@@ -1,5 +1,9 @@
 # CodeSV
 
+### End of Life Feature as of February 1, 2023
+Effective February 1, 2023, we will deprecate the CodeSV. We will continue to support the CodeSV until Jan 31st, 2023.
+
+
 CA CodeSV is a new, lightweight way to define virtual services and save valuable time. 
 
 At the core, CodeSV delivers a simple yet powerful Java library that provides an easy to use API so you can create and run virtual services as a part of jUnit testing. 
