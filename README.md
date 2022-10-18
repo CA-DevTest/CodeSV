@@ -1,7 +1,7 @@
 # CodeSV
 
 ### End of Life Feature as of February 1, 2023
-Effective February 1, 2023, we will deprecate the CodeSV. We will continue to support the CodeSV until Jan 31st, 2023.
+_*Effective February 1, 2023, we will deprecate the CodeSV. We will continue to support the CodeSV until Jan 31st, 2023.*_
 
 
 CA CodeSV is a new, lightweight way to define virtual services and save valuable time. 
